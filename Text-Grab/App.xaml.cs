@@ -43,6 +43,9 @@ public partial class App : System.Windows.Application
     public static void DefaultLaunch()
     {
         TextGrabMode defaultLaunchSetting = Enum.Parse<TextGrabMode>(_defaultSettings.DefaultLaunch, true);
+        // Laban: skip default launch; only respond to hotkeys/UI.
+        if (true)
+            return;
 
         switch (defaultLaunchSetting)
         {
@@ -68,6 +71,7 @@ public partial class App : System.Windows.Application
                 break;
         }
     }
+
     public static void SetTheme(object? sender = null, EventArgs? e = null)
     {
         bool gotTheme = Enum.TryParse(_defaultSettings.AppTheme.ToString(), true, out AppTheme currentAppTheme);

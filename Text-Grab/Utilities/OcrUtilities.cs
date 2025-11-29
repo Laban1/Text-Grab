@@ -70,6 +70,8 @@ public static partial class OcrUtilities
                 isFirstWord = false;
                 isPrevWordSpaceJoining = isThisWordSpaceJoining;
             }
+
+            text.AppendLine(); // Lars 11/29/2025: Added to get separate lines in OCR on separate lines in text result.
         }
 
         if (DefaultSettings.CorrectToLatin)

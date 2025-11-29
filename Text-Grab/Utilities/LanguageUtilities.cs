@@ -66,7 +66,7 @@ public static class LanguageUtilities
         string lastUsedLang = AppUtilities.TextGrabSettings.LastUsedLang;
 
         ILanguage selectedLanguage = GetCurrentInputLanguage();
-
+        //selectedLanguage = new GlobalLang("zh-Hant-TW");
         if (!string.IsNullOrEmpty(lastUsedLang))
         {
             if (lastUsedLang == new WindowsAiLang().LanguageTag)
